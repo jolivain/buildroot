@@ -1,0 +1,111 @@
+config BR2_PACKAGE_GLSLSANDBOX_PLAYER
+	bool "glslsandbox-player"
+	depends on BR2_PACKAGE_HAS_LIBEGL
+	depends on BR2_PACKAGE_HAS_LIBGLES
+	help
+	  GLSL Sandbox standalone player allow one to run and render
+	  (most of) nice shaders available online on the
+	  http://glslsandbox.com/ website, but without the need of an
+	  Internet connection, a web browser or any of its
+	  dependencies. Instead, the only requirement of
+	  glslsandbox-player is a working EGL and GLESv2 libraries.
+
+	  This package is useful for stressing and testing GLES shader
+	  compiler in GPU drivers.
+
+	  https://github.com/jolivain/glslsandbox-player
+
+if BR2_PACKAGE_GLSLSANDBOX_PLAYER
+
+config BR2_PACKAGE_GLSLSANDBOX_PLAYER_DL_SHADERS
+	bool "Download shaders from http://glslsandbox.com/"
+	help
+	  Download some shaders from http://glslsandbox.com/ to be
+	  embedded in the binary
+
+config BR2_PACKAGE_GLSLSANDBOX_PLAYER_PNG
+	bool "Enable PNG support"
+	select BR2_PACKAGE_LIBPNG
+	help
+	  Enable PNG texture loading support
+
+config BR2_PACKAGE_GLSLSANDBOX_PLAYER_TESTING
+	bool "Enable testing"
+	help
+	  Generate and install test suite on target
+
+config BR2_PACKAGE_GLSLSANDBOX_PLAYER_SCRIPTS
+	bool "Install scripts"
+	depends on BR2_USE_MMU # bash, python
+	depends on BR2_USE_WCHAR # python
+	depends on BR2_TOOLCHAIN_HAS_THREADS # python
+	depends on !BR2_STATIC_LIBS # python
+	select BR2_PACKAGE_BUSYBOX_SHOW_OTHERS # bash
+	select BR2_PACKAGE_PYTHON
+	select BR2_PACKAGE_BASH
+	select BR2_PACKAGE_LIBCURL
+	select BR2_PACKAGE_CURL
+	select BR2_PACKAGE_OPENSSL
+	select BR2_PACKAGE_LIBOPENSSL_BIN if BR2_PACKAGE_LIBOPENSSL
+	select BR2_PACKAGE_LIBRESSL_BIN if BR2_PACKAGE_LIBRESSL
+	select BR2_PACKAGE_MAKE
+	select BR2_PACKAGE_COREUTILS
+	select BR2_PACKAGE_JPEG
+	select BR2_PACKAGE_IMAGEMAGICK
+	help
+	  Install additional helper scripts
+
+choice
+	prompt "Native windowing system"
+	default BR2_PACKAGE_GLSLSANDBOX_PLAYER_RPI   if BR2_PACKAGE_RPI_USERLAND
+	default BR2_PACKAGE_GLSLSANDBOX_PLAYER_TISGX if BR2_PACKAGE_TI_SGX_UM
+	default BR2_PACKAGE_GLSLSANDBOX_PLAYER_MALI  if BR2_PACKAGE_SUNXI_MALI_MAINLINE
+	default BR2_PACKAGE_GLSLSANDBOX_PLAYER_WL    if BR2_PACKAGE_WAYLAND
+	default BR2_PACKAGE_GLSLSANDBOX_PLAYER_X11   if BR2_PACKAGE_XORG7
+	default BR2_PACKAGE_GLSLSANDBOX_PLAYER_SDL2  if BR2_PACKAGE_SDL2_OPENGLES
+	help
+	  Select the native windowing system you wish to use.
+
+config BR2_PACKAGE_GLSLSANDBOX_PLAYER_KMS
+	bool "KMS/DRM/GBM"
+	select BR2_PACKAGE_LIBDRM
+
+config BR2_PACKAGE_GLSLSANDBOX_PLAYER_VIVFB
+	bool "Vivante Frame Buffer"
+	depends on BR2_PACKAGE_IMX_GPU_VIV
+
+config BR2_PACKAGE_GLSLSANDBOX_PLAYER_RPI
+	bool "RaspberryPI Frame Buffer"
+	depends on BR2_PACKAGE_RPI_USERLAND
+
+config BR2_PACKAGE_GLSLSANDBOX_PLAYER_TISGX
+	bool "TI/SGX Frame Buffer"
+	depends on BR2_PACKAGE_TI_SGX_UM
+
+config BR2_PACKAGE_GLSLSANDBOX_PLAYER_MALI
+	bool "Allwinner ARM/Mali Frame Buffer"
+	depends on BR2_PACKAGE_SUNXI_MALI_MAINLINE
+
+config BR2_PACKAGE_GLSLSANDBOX_PLAYER_WL
+	bool "Wayland"
+	depends on BR2_PACKAGE_WAYLAND
+
+config BR2_PACKAGE_GLSLSANDBOX_PLAYER_X11
+	bool "X11"
+	depends on BR2_PACKAGE_XORG7
+
+config BR2_PACKAGE_GLSLSANDBOX_PLAYER_SDL2
+	bool "SDL2"
+	depends on BR2_PACKAGE_SDL2_OPENGLES
+
+endchoice
+
+if BR2_PACKAGE_GLSLSANDBOX_PLAYER_WL
+config BR2_PACKAGE_GLSLSANDBOX_PLAYER_WL_IVI
+	bool "Wayland IVI shell support"
+endif
+
+endif
+
+comment "glslsandbox-player needs an openGL ES and EGL driver"
+	depends on !BR2_PACKAGE_HAS_LIBEGL || !BR2_PACKAGE_HAS_LIBGLES

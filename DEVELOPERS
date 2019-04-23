@@ -1262,6 +1262,7 @@ F:	package/paho-mqtt-c
 N:	Julien Olivain <juju@cotds.org>
 F:	board/technexion/imx8mpico/
 F:	configs/imx8mpico_defconfig
+F:	package/glslsandbox-player/
 
 N:	Julien Viard de Galbert <julien@vdg.name>
 F:	package/dieharder/
