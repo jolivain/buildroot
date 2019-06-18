@@ -248,4 +248,13 @@ else
 MESA3D_CONF_OPTS += --disable-lmsensors
 endif
 
+# mesa3d Autotools does not install imx-drm. So let's install it manually
+# until buildroot updated to the new mesa3d meson build system
+ifeq ($(BR2_PACKAGE_MESA3D_GALLIUM_DRIVER_ETNAVIV),y)
+define MESA3D_INSTALL_TARGET_CMDS
+	$(TARGET_MAKE_ENV) $(MESA3D_MAKE_ENV) $(MESA3D_MAKE) $(MESA3D_INSTALL_TARGET_OPTS) -C $(MESA3D_SRCDIR)
+	ln -f $(TARGET_DIR)/usr/lib/dri/etnaviv_dri.so $(TARGET_DIR)/usr/lib/dri/imx-drm_dri.so
+endef
+endif
+
 $(eval $(autotools-package))
