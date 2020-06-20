@@ -1,0 +1,7 @@
+config BR2_PACKAGE_GENLISP
+	bool "genlisp"
+	select BR2_PACKAGE_GENMSG
+	help
+	  Common-Lisp message and service generation for ROS.
+
+	  http://wiki.ros.org/genlisp
