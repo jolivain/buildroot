@@ -1,0 +1,8 @@
+config BR2_PACKAGE_HOST_CATKIN
+	bool "host catkin"
+	select BR2_PACKAGE_HOST_PYTHON_CATKIN_PKG
+	select BR2_PACKAGE_HOST_PYTHON_EMPY
+	help
+	  Low-level build system macros and infrastructure for ROS.
+
+	  http://wiki.ros.org/catkin
