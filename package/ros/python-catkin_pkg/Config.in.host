@@ -1,0 +1,7 @@
+config BR2_PACKAGE_HOST_PYTHON_CATKIN_PKG
+	bool "host python-catkin_pkg"
+	select BR2_PACKAGE_HOST_PYTHON_PYPARSING # runtime
+	help
+	  Standalone Python library for the catkin build system.
+
+	  http://wiki.ros.org/catkin_pkg
