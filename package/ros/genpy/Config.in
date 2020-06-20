@@ -1,0 +1,7 @@
+config BR2_PACKAGE_GENPY
+	bool "genpy"
+	select BR2_PACKAGE_GENMSG
+	help
+	  Python ROS message and service generators.
+
+	  http://wiki.ros.org/genpy
