@@ -1,0 +1,11 @@
+config BR2_PACKAGE_MESSAGE_RUNTIME
+	bool "message runtime"
+	select BR2_PACKAGE_CPP_COMMON
+	select BR2_PACKAGE_GENCPP
+	select BR2_PACKAGE_ROSCPP_CORE_SET
+	select BR2_PACKAGE_ROSCPP_SERIALIZATION
+	help
+	  Package modeling the run-time dependencies for language
+	  bindings of messages.
+
+	  http://wiki.ros.org/message_runtime
