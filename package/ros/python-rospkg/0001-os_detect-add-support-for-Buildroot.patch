@@ -1,0 +1,39 @@
+From 5ab4408e65f01bbb48971f6264f6c890b89cefa9 Mon Sep 17 00:00:00 2001
+From: Julien Olivain <ju.o@free.fr>
+Date: Sun, 28 Jun 2020 16:15:48 +0200
+Subject: [PATCH] os_detect: add support for Buildroot
+
+Add support for systems generated with Buildroot:
+https://buildroot.org/
+
+Buildroot systems follows the freedesktop.org /etc/os-release spec. See:
+https://git.busybox.net/buildroot/commit/?id=451a887894faddef019e9a0628c21b5f2e9eee56
+
+Signed-off-by: Julien Olivain <ju.o@free.fr>
+---
+ src/rospkg/os_detect.py | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/src/rospkg/os_detect.py b/src/rospkg/os_detect.py
+index 034d94a..a7f1d5d 100644
+--- a/src/rospkg/os_detect.py
++++ b/src/rospkg/os_detect.py
+@@ -711,6 +711,7 @@ class OsDetect:
+ 
+ OS_ALPINE = 'alpine'
+ OS_ARCH = 'arch'
++OS_BUILDROOT = 'buildroot'
+ OS_MANJARO = 'manjaro'
+ OS_CENTOS = 'centos'
+ OS_CYGWIN = 'cygwin'
+@@ -743,6 +744,7 @@ OS_ZORIN =  'zorin'
+ 
+ OsDetect.register_default(OS_ALPINE, FdoDetect("alpine"))
+ OsDetect.register_default(OS_ARCH, Arch())
++OsDetect.register_default(OS_BUILDROOT, FdoDetect("buildroot"))
+ OsDetect.register_default(OS_MANJARO, Manjaro())
+ OsDetect.register_default(OS_CENTOS, Centos())
+ OsDetect.register_default(OS_CYGWIN, Cygwin())
+-- 
+2.26.2
+
