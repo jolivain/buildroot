@@ -1,0 +1,21 @@
+config BR2_PACKAGE_ROS_ENVIRONMENT
+	bool "ros_environment"
+	help
+	  The package provides the environment variables
+	  'ROS_VERSION', 'ROS_DISTRO', 'ROS_PACKAGE_PATH', and
+	  'ROS_ETC_DIR'.
+
+	  http://wiki.ros.org/ros_environment
+
+if BR2_PACKAGE_ROS_ENVIRONMENT
+config BR2_PACKAGE_ROS_ENVIRONMENT_INSTALL_PROFILE
+	bool "Install ros shell profile"
+	help
+	  Installs the ROS shell in /etc/profile.d.  ROS environment
+	  will be activated at login.
+
+	  If not installed, ROS environment will need to be activated
+	  manually, with command:
+	  ". /opt/ros/$(rosversion -d)/setup.sh"
+
+endif

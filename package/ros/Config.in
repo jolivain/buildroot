@@ -35,6 +35,7 @@ menuconfig BR2_PACKAGE_ROS_SUPPORT
 if BR2_PACKAGE_ROS_SUPPORT
 source "package/ros/catkin/Config.in"
 source "package/ros/python-catkin_pkg/Config.in"
+source "package/ros/ros_environment/Config.in"
 endif
 
 comment "ROS needs a toolchain w/ C++, threads and wchar"
