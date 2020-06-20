@@ -1,0 +1,10 @@
+config BR2_PACKAGE_PYTHON_CATKIN_PKG
+	bool "python-catkin_pkg"
+	select BR2_PACKAGE_PYTHON_DATEUTIL # runtime
+	select BR2_PACKAGE_PYTHON_DOCUTILS # runtime
+	select BR2_PACKAGE_PYTHON_PYPARSING # runtime
+	select BR2_PACKAGE_PYTHON_SETUPTOOLS # runtime
+	help
+	  Standalone Python library for the catkin build system.
+
+	  http://wiki.ros.org/catkin_pkg
