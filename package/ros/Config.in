@@ -35,6 +35,7 @@ menuconfig BR2_PACKAGE_ROS_SUPPORT
 if BR2_PACKAGE_ROS_SUPPORT
 source "package/ros/catkin/Config.in"
 source "package/ros/cmake_modules/Config.in"
+source "package/ros/gencpp/Config.in"
 source "package/ros/genmsg/Config.in"
 source "package/ros/python-catkin_pkg/Config.in"
 source "package/ros/python-rosdep/Config.in"
