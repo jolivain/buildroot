@@ -33,6 +33,7 @@ menuconfig BR2_PACKAGE_ROS_SUPPORT
 	  See: http://wiki.ros.org/Metapackages
 
 if BR2_PACKAGE_ROS_SUPPORT
+source "package/ros/catkin/Config.in"
 source "package/ros/python-catkin_pkg/Config.in"
 endif
 
