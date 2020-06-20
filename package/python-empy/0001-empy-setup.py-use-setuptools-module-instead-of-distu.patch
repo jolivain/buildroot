@@ -1,0 +1,38 @@
+From 71e953770028441e7bb8a0c97d6e882c38aba43f Mon Sep 17 00:00:00 2001
+From: Julien Olivain <ju.o@free.fr>
+Date: Sun, 28 Jun 2020 16:02:13 +0200
+Subject: [PATCH] empy: setup.py: use setuptools module instead of
+ distutils.core
+
+For host python setuptools package, Buildroot uses the
+--single-version-externally-managed option. See:
+https://git.busybox.net/buildroot/commit/?id=c577ad692f36cedbcc3378b86e1af237402b0083
+
+This option is available in the setuptools module only, and not in
+distutils.core, which is now obsolete.
+
+This patch make empy use the setup Python module from setuptools instead
+of distutils.core, to make it compile properly in Buildroot as a host
+package.
+
+Signed-off-by: Julien Olivain <ju.o@free.fr>
+---
+ setup.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/setup.py b/setup.py
+index f445fbe..f4cd82a 100644
+--- a/setup.py
++++ b/setup.py
+@@ -2,7 +2,7 @@
+ #
+ # $Id: setup.py.pre 3116 2004-01-14 02:53:02Z max $ $Date: 2004-01-13 18:53:02 -0800 (Tue, 13 Jan 2004) $
+ 
+-from distutils.core import setup
++from setuptools import setup
+ 
+ DESCRIPTION = "A templating system for Python."
+ 
+-- 
+2.26.2
+

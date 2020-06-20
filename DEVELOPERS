@@ -1608,6 +1608,7 @@ F:	package/fluidsynth/
 F:	package/glslsandbox-player/
 F:	package/ptm2human/
 F:	package/python-distro/
+F:	package/python-empy/
 F:	package/python-gnupg/
 F:	package/python-pyalsa/
 F:	package/riscv-isa-sim/
