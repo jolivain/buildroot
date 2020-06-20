@@ -1440,6 +1440,7 @@ F:	package/python-distro/
 F:	package/python-empy/
 F:	package/python-gnupg/
 F:	package/python-pyalsa/
+F:	package/ros/
 
 N:	Julien Viard de Galbert <julien@vdg.name>
 F:	package/dieharder/
