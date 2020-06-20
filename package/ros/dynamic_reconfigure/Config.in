@@ -1,0 +1,14 @@
+config BR2_PACKAGE_DYNAMIC_RECONFIGURE
+	bool "dynamic reconfigure"
+	select BR2_PACKAGE_PYTHON_ROSPKG
+	select BR2_PACKAGE_ROSCPP
+	select BR2_PACKAGE_ROSLIB
+	select BR2_PACKAGE_ROSPACK
+	select BR2_PACKAGE_ROSTEST
+	select BR2_PACKAGE_ROS_COMM_SET
+	select BR2_PACKAGE_ROS_SET
+	help
+	  The dynamic_reconfigure package provides a means to update
+	  parameters at runtime without having to restart the node.
+
+	  http://wiki.ros.org/dynamic_reconfigure
