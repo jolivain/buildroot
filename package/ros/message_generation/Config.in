@@ -1,0 +1,13 @@
+config BR2_PACKAGE_MESSAGE_GENERATION
+	bool "message generation"
+	select BR2_PACKAGE_GENCPP
+	select BR2_PACKAGE_GENEUS
+	select BR2_PACKAGE_GENLISP
+	select BR2_PACKAGE_GENMSG
+	select BR2_PACKAGE_GENNODEJS
+	select BR2_PACKAGE_GENPY
+	help
+	  Package modeling the build-time dependencies for generating
+	  language bindings of messages.
+
+	  http://wiki.ros.org/message_generation
