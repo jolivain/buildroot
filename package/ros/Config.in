@@ -1,0 +1,36 @@
+menuconfig BR2_PACKAGE_ROS_SUPPORT
+	bool "ROS: Robot Operating System"
+	depends on BR2_INSTALL_LIBSTDCPP # boost
+	depends on BR2_TOOLCHAIN_HAS_THREADS # boost
+	depends on BR2_USE_WCHAR # boost
+	# Most ROS core packages are using the host Catkin build
+	# system, Boost and Python 3. We select those packages here so
+	# they become implicit dependencies, to simplify Buildroot ROS
+	# package recipes.
+	select BR2_PACKAGE_BOOST
+	select BR2_PACKAGE_PYTHON3
+	help
+	  The Robot Operating System (ROS) is a set of software
+	  libraries and tools that help you build robot
+	  applications. From drivers to state-of-the-art algorithms,
+	  and with powerful developer tools, ROS has what you need for
+	  your next robotics project. And it's all open source.
+
+	  https://www.ros.org/
+
+	  Note on ROS Buildroot integration:
+
+	  ROS components are split in small ROS-packages. Those small
+	  packages are sometimes grouped in a collection, into a
+	  single source package or repository. Each ROS-package is
+	  exposed as a single Buildroot-package, to allow minimal
+	  depedencies installations. The ROS-package collections
+	  exposed in Buildroot correspond to a single source
+	  package. Each collection includes a meta-package with the
+	  same collection name, that will install the collection
+	  metadata, and a common set of packages for this collection.
+	  See: http://wiki.ros.org/Metapackages
+
+comment "ROS needs a toolchain w/ C++, threads and wchar"
+	depends on !BR2_TOOLCHAIN_HAS_THREADS \
+		|| !BR2_INSTALL_LIBSTDCPP || !BR2_USE_WCHAR
