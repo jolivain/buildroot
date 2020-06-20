@@ -1435,6 +1435,7 @@ F:	package/fluid-soundfont/
 F:	package/fluidsynth/
 F:	package/glslsandbox-player/
 F:	package/ptm2human/
+F:	package/python-distro/
 F:	package/python-empy/
 F:	package/python-pyalsa/
 
