@@ -1,0 +1,7 @@
+config BR2_PACKAGE_GENMSG
+	bool "genmsg"
+	help
+	  Standalone Python library for generating ROS message and
+	  service data structures for various languages.
+
+	  http://wiki.ros.org/genmsg
