@@ -1,0 +1,9 @@
+config BR2_PACKAGE_PYTHON_ROSDEP
+	bool "python-rosdep"
+	select BR2_PACKAGE_PYTHON_ROSDISTRO # runtime
+	select BR2_PACKAGE_PYTHON3_SSL # runtime, for urllib https
+	select BR2_PACKAGE_CA_CERTIFICATES # runtime, for urllib https
+	help
+	  rosdep package manager abstraction tool for ROS.
+
+	  https://docs.ros.org/independent/api/rosdep/html/
