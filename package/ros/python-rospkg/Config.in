@@ -1,0 +1,14 @@
+config BR2_PACKAGE_PYTHON_ROSPKG
+	bool "python-rospkg"
+	select BR2_PACKAGE_PYTHON3_PYEXPAT # runtime
+	select BR2_PACKAGE_PYTHON_CATKIN_PKG # runtime
+	select BR2_PACKAGE_PYTHON_DISTRO # runtime
+	help
+	  The rospkg Python module provides basic utilities for
+	  querying information about ROS packages, stacks, and
+	  distributions.
+
+	  It is used at runtime by ros tools on target system, to
+	  check and query installed ros package dependencies.
+
+	  http://docs.ros.org/independent/api/rospkg/html/python_api.html
