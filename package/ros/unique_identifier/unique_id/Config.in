@@ -1,0 +1,12 @@
+config BR2_PACKAGE_UNIQUE_ID
+	bool "unique_id"
+	select BR2_PACKAGE_ROSCPP
+	select BR2_PACKAGE_ROSPY
+	select BR2_PACKAGE_ROS_COMM_SET
+	select BR2_PACKAGE_UUID_MSGS
+	help
+	  This package provides Python and C++ interfaces for
+	  universally unique identifiers (UUIDs), as described in RFC
+	  4122.
+
+	  https://wiki.ros.org/unique_id

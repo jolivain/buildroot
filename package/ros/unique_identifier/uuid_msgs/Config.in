@@ -1,0 +1,9 @@
+config BR2_PACKAGE_UUID_MSGS
+	bool "uuid_msgs"
+	select BR2_PACKAGE_MESSAGE_GENERATION
+	select BR2_PACKAGE_MESSAGE_RUNTIME # runtime
+	select BR2_PACKAGE_STD_MSGS
+	help
+	  ROS messages for universally unique identifiers.
+
+	  http://wiki.ros.org/uuid_msgs
