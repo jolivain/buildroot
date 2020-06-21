@@ -1,0 +1,16 @@
+config BR2_PACKAGE_DIAGNOSTIC_ANALYSIS
+	bool "diagnostic_analysis"
+	select BR2_PACKAGE_COMMON_MSGS_SET
+	select BR2_PACKAGE_DIAGNOSTIC_MSGS
+	select BR2_PACKAGE_ROSBAG
+	select BR2_PACKAGE_ROSLIB
+	select BR2_PACKAGE_ROSTEST
+	select BR2_PACKAGE_ROS_COMM_SET
+	select BR2_PACKAGE_ROS_SET
+	help
+	  The diagnostic_analysis package can convert a log of
+	  diagnostics data into a series of CSV files. Robot logs are
+	  recorded with rosbag, and can be processed offline using the
+	  scripts in this package.
+
+	  http://wiki.ros.org/diagnostic_analysis

@@ -1,0 +1,25 @@
+config BR2_PACKAGE_DIAGNOSTIC_AGGREGATOR
+	bool "diagnostic_aggregator"
+	select BR2_PACKAGE_BONDCPP
+	select BR2_PACKAGE_BONDPY
+	select BR2_PACKAGE_BOND_CORE_SET
+	select BR2_PACKAGE_COMMON_MSGS_SET
+	select BR2_PACKAGE_DIAGNOSTIC_MSGS
+	select BR2_PACKAGE_PLUGINLIB
+	select BR2_PACKAGE_ROSCPP
+	select BR2_PACKAGE_ROSPY
+	select BR2_PACKAGE_ROSTEST
+	select BR2_PACKAGE_ROS_SET
+	select BR2_PACKAGE_XMLRPCPP
+	help
+	  The diagnostic_aggregator contains a ROS node,
+	  aggregator_node, that listens to
+	  diagnostic_msgs/DiagnosticArray messages on the /diagnostics
+	  topic, processes and categorizes the data, and republishes
+	  on /diagnostics_agg. The aggregator_node loads "Analyzer"
+	  plugins to perform the diagnostics processing and
+	  categorization. The configuration and setup for each
+	  diagnostic aggregator is specific to each robot and can be
+	  determined by users or developers.
+
+	  http://wiki.ros.org/diagnostic_aggregator
