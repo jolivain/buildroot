@@ -1,0 +1,8 @@
+config BR2_PACKAGE_SENSOR_MSGS
+	bool "sensor_msgs"
+	select BR2_PACKAGE_GEOMETRY_MSGS
+	help
+	  This package defines message for commonly used sensors,
+	  including cameras and scanning laser rangefinders.
+
+	  http://wiki.ros.org/sensor_msgs

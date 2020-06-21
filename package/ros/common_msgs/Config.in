@@ -1,0 +1,21 @@
+menuconfig BR2_PACKAGE_COMMON_MSGS_SET
+	bool "common_msgs collection"
+	select BR2_PACKAGE_CPP_COMMON
+	select BR2_PACKAGE_MESSAGE_GENERATION
+	select BR2_PACKAGE_MESSAGE_RUNTIME
+	select BR2_PACKAGE_ROSCPP_CORE_SET
+	select BR2_PACKAGE_ROSCPP_SERIALIZATION
+	select BR2_PACKAGE_STD_MSGS
+
+if BR2_PACKAGE_COMMON_MSGS_SET
+source "package/ros/common_msgs/actionlib_msgs/Config.in"
+source "package/ros/common_msgs/common_msgs/Config.in"
+source "package/ros/common_msgs/diagnostic_msgs/Config.in"
+source "package/ros/common_msgs/geometry_msgs/Config.in"
+source "package/ros/common_msgs/nav_msgs/Config.in"
+source "package/ros/common_msgs/sensor_msgs/Config.in"
+source "package/ros/common_msgs/shape_msgs/Config.in"
+source "package/ros/common_msgs/stereo_msgs/Config.in"
+source "package/ros/common_msgs/trajectory_msgs/Config.in"
+source "package/ros/common_msgs/visualization_msgs/Config.in"
+endif

@@ -1,0 +1,8 @@
+config BR2_PACKAGE_STEREO_MSGS
+	bool "stereo_msgs"
+	select BR2_PACKAGE_SENSOR_MSGS
+	help
+	  stereo_msgs contains messages specific to stereo processing,
+	  such as disparity images.
+
+	  http://wiki.ros.org/stereo_msgs

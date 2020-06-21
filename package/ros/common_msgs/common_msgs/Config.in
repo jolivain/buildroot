@@ -1,0 +1,23 @@
+config BR2_PACKAGE_COMMON_MSGS
+	bool "common_msgs metapackage"
+	select BR2_PACKAGE_ACTIONLIB_MSGS # runtime
+	select BR2_PACKAGE_DIAGNOSTIC_MSGS # runtime
+	select BR2_PACKAGE_GEOMETRY_MSGS # runtime
+	select BR2_PACKAGE_NAV_MSGS # runtime
+	select BR2_PACKAGE_SENSOR_MSGS # runtime
+	select BR2_PACKAGE_SHAPE_MSGS # runtime
+	select BR2_PACKAGE_STEREO_MSGS # runtime
+	select BR2_PACKAGE_TRAJECTORY_MSGS # runtime
+	select BR2_PACKAGE_VISUALIZATION_MSGS # runtime
+	help
+	  common_msgs contains messages that are widely used by other
+	  ROS packages. These includes messages for actions
+	  (actionlib_msgs), diagnostics (diagnostic_msgs), geometric
+	  primitives (geometry_msgs), robot navigation (nav_msgs), and
+	  common sensors (sensor_msgs), such as laser range finders,
+	  cameras, point clouds.
+
+	  This metapackage selects common packages for this
+	  collection.
+
+	  http://wiki.ros.org/common_msgs
