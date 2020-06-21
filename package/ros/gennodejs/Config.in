@@ -1,0 +1,8 @@
+config BR2_PACKAGE_GENNODEJS
+	bool "gennodejs"
+	select BR2_PACKAGE_GENMSG
+	help
+	  This package generates the Javascript messages for ROS
+	  packages and is used by rosnodejs.
+
+	  http://wiki.ros.org/gennodejs
