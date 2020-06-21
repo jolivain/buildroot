@@ -35,6 +35,7 @@ menuconfig BR2_PACKAGE_ROS_SUPPORT
 if BR2_PACKAGE_ROS_SUPPORT
 source "package/ros/catkin/Config.in"
 source "package/ros/cmake_modules/Config.in"
+source "package/ros/console_bridge/Config.in"
 source "package/ros/gencpp/Config.in"
 source "package/ros/geneus/Config.in"
 source "package/ros/genlisp/Config.in"
