@@ -1,0 +1,10 @@
+menuconfig BR2_PACKAGE_GEOMETRY_SET
+	bool "geometry collection"
+
+if BR2_PACKAGE_GEOMETRY_SET
+source "package/ros/geometry/eigen_conversions/Config.in"
+source "package/ros/geometry/geometry/Config.in"
+source "package/ros/geometry/kdl_conversions/Config.in"
+source "package/ros/geometry/tf/Config.in"
+source "package/ros/geometry/tf_conversions/Config.in"
+endif

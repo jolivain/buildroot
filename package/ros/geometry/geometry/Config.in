@@ -1,0 +1,14 @@
+config BR2_PACKAGE_GEOMETRY
+	bool "geometry metapackage"
+	select BR2_PACKAGE_ANGLES # runtime
+	select BR2_PACKAGE_EIGEN_CONVERSIONS # runtime
+	select BR2_PACKAGE_KDL_CONVERSIONS # runtime
+	select BR2_PACKAGE_TF # runtime
+	select BR2_PACKAGE_TF_CONVERSIONS # runtime
+	help
+	  A metapackage for geometry library suite.
+
+	  This metapackage selects common packages for this
+	  collection.
+
+	  http://wiki.ros.org/geometry
