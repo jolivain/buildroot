@@ -1,0 +1,7 @@
+config BR2_PACKAGE_MK
+	bool "mk"
+	help
+	  A collection of .mk include files for building ROS
+	  architectural elements.
+
+	  https://wiki.ros.org/mk

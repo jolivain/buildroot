@@ -1,0 +1,19 @@
+config BR2_PACKAGE_ROS
+	bool "ros metapackage"
+	select BR2_PACKAGE_MK
+	select BR2_PACKAGE_ROSBASH
+	select BR2_PACKAGE_ROSBOOST_CFG
+	select BR2_PACKAGE_ROSBUILD
+	select BR2_PACKAGE_ROSCLEAN
+	select BR2_PACKAGE_ROSCREATE
+	select BR2_PACKAGE_ROSLANG
+	select BR2_PACKAGE_ROSLIB
+	select BR2_PACKAGE_ROSMAKE
+	select BR2_PACKAGE_ROSUNIT
+	help
+	  ros metapackage.
+
+	  This metapackage selects common packages for this
+	  collection.
+
+	  https://wiki.ros.org/ros

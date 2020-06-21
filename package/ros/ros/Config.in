@@ -1,0 +1,16 @@
+menuconfig BR2_PACKAGE_ROS_SET
+	bool "ros collection"
+
+if BR2_PACKAGE_ROS_SET
+source "package/ros/ros/mk/Config.in"
+source "package/ros/ros/ros/Config.in"
+source "package/ros/ros/rosbash/Config.in"
+source "package/ros/ros/rosboost_cfg/Config.in"
+source "package/ros/ros/rosbuild/Config.in"
+source "package/ros/ros/rosclean/Config.in"
+source "package/ros/ros/roscreate/Config.in"
+source "package/ros/ros/roslang/Config.in"
+source "package/ros/ros/roslib/Config.in"
+source "package/ros/ros/rosmake/Config.in"
+source "package/ros/ros/rosunit/Config.in"
+endif

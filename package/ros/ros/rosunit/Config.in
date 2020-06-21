@@ -1,0 +1,12 @@
+config BR2_PACKAGE_ROSUNIT
+	bool "rosunit"
+	help
+	  rosunit is an internal tool for running unit tests within
+	  ROS. While it can be run by a regular user, most users will
+	  generally use rosunit indirectly via rosbuild test
+	  macros. The main feature that rosunit provides is
+	  terminating a unit test based on a timeout and generating an
+	  appropriate test failure. The rosbuild system uses this
+	  feature to ensure that unit tests properly terminate.
+
+	  https://wiki.ros.org/rosunit
