@@ -1,0 +1,10 @@
+menuconfig BR2_PACKAGE_ROSCPP_CORE_SET
+	bool "roscpp_core collection"
+
+if BR2_PACKAGE_ROSCPP_CORE_SET
+source "package/ros/roscpp_core/cpp_common/Config.in"
+source "package/ros/roscpp_core/roscpp_core/Config.in"
+source "package/ros/roscpp_core/roscpp_serialization/Config.in"
+source "package/ros/roscpp_core/roscpp_traits/Config.in"
+source "package/ros/roscpp_core/rostime/Config.in"
+endif
