@@ -1,0 +1,11 @@
+menuconfig BR2_PACKAGE_BOND_CORE_SET
+	bool "bond_core collection"
+
+if BR2_PACKAGE_BOND_CORE_SET
+source "package/ros/bond_core/bond/Config.in"
+source "package/ros/bond_core/bond_core/Config.in"
+source "package/ros/bond_core/bondcpp/Config.in"
+source "package/ros/bond_core/bondpy/Config.in"
+source "package/ros/bond_core/smclib/Config.in"
+source "package/ros/bond_core/test_bond/Config.in"
+endif

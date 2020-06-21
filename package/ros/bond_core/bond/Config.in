@@ -1,0 +1,11 @@
+config BR2_PACKAGE_BOND
+	bool "bond"
+	select BR2_PACKAGE_MESSAGE_GENERATION
+	select BR2_PACKAGE_STD_MSGS
+	help
+	  bond package: a bond allows two processes, A and B, to know
+	  when the other has terminated, either cleanly or by
+	  crashing. The bond remains connected until it is either
+	  broken explicitly or until a heartbeat times out.
+
+	  http://wiki.ros.org/bond

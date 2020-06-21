@@ -1,0 +1,7 @@
+config BR2_PACKAGE_BONDPY
+	bool "bondpy"
+	help
+	  Python implementation of bond, a mechanism for checking when
+	  another process has terminated.
+
+	  http://wiki.ros.org/bondpy

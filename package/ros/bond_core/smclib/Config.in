@@ -1,0 +1,11 @@
+config BR2_PACKAGE_SMCLIB
+	bool "smclib"
+	help
+	  The State Machine Compiler (SMC) from
+	  http://smc.sourceforge.net/ converts a language-independent
+	  description of a state machine into the source code to
+	  support that state machine. This package contains the
+	  libraries that a compiled state machine depends on, but it
+	  does not contain the compiler itself.
+
+	  http://wiki.ros.org/smclib
