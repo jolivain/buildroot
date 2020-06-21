@@ -1,0 +1,46 @@
+config BR2_PACKAGE_GEOGRAPHICLIB
+	bool "geographiclib"
+	help
+	  GeographicLib is a small set of C++ classes for performing
+	  conversions between geographic, UTM, UPS, MGRS, geocentric,
+	  and local cartesian coordinates, for gravity (e.g.,
+	  EGM2008), geoid height, and geomagnetic field (e.g.,
+	  WMM2020) calculations, and for solving geodesic
+	  problems. (The library may be used from .NET applications
+	  using the NETGeographicLib wrapper library.) It is a
+	  suitable replacement for the core functionality provided by
+	  geotrans. The library is licensed under the MIT/X11 License;
+	  see LICENSE.txt for the terms.
+
+	  https://geographiclib.sourceforge.io/
+
+if BR2_PACKAGE_GEOGRAPHICLIB
+
+config BR2_PACKAGE_GEOGRAPHICLIB_GEOIDS
+	bool "Install gridded geoid data"
+
+if BR2_PACKAGE_GEOGRAPHICLIB_GEOIDS
+config BR2_PACKAGE_GEOGRAPHICLIB_GEOIDS_EGM96_5
+	bool "geoids egm96-5"
+	default y
+endif
+
+config BR2_PACKAGE_GEOGRAPHICLIB_GRAVITY
+	bool "Install earth gravity models"
+
+if BR2_PACKAGE_GEOGRAPHICLIB_GRAVITY
+config BR2_PACKAGE_GEOGRAPHICLIB_GRAVITY_EGM96
+	bool "gravity egm96"
+	default y
+endif
+
+config BR2_PACKAGE_GEOGRAPHICLIB_MAGNETIC
+	bool "Install geomagnetic  models"
+
+if BR2_PACKAGE_GEOGRAPHICLIB_MAGNETIC
+config BR2_PACKAGE_GEOGRAPHICLIB_MAGNETIC_EMM2015
+	bool "magnetic emm2015"
+	default y
+endif
+
+endif
