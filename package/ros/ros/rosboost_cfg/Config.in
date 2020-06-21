@@ -1,0 +1,7 @@
+config BR2_PACKAGE_ROSBOOST_CFG
+	bool "rosboost_cfg"
+	help
+	  Contains scripts used by the rosboost-cfg tool for
+	  determining cflags/lflags/etc. of boost on your system.
+
+	  https://wiki.ros.org/rosboost_cfg

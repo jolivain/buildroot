@@ -1,0 +1,6 @@
+config BR2_PACKAGE_ROSCLEAN
+	bool "rosclean"
+	help
+	  rosclean: cleanup filesystem resources (e.g. log files).
+
+	  https://wiki.ros.org/rosclean
