@@ -1,0 +1,15 @@
+menuconfig BR2_PACKAGE_GEOMETRY2_SET
+	bool "geometry2 collection"
+
+if BR2_PACKAGE_GEOMETRY2_SET
+source "package/ros/geometry2/geometry2/Config.in"
+source "package/ros/geometry2/tf2/Config.in"
+source "package/ros/geometry2/tf2_eigen/Config.in"
+source "package/ros/geometry2/tf2_geometry_msgs/Config.in"
+source "package/ros/geometry2/tf2_kdl/Config.in"
+source "package/ros/geometry2/tf2_msgs/Config.in"
+source "package/ros/geometry2/tf2_py/Config.in"
+source "package/ros/geometry2/tf2_ros/Config.in"
+source "package/ros/geometry2/tf2_sensor_msgs/Config.in"
+source "package/ros/geometry2/tf2_tools/Config.in"
+endif

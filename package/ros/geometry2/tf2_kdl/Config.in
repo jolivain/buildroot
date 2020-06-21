@@ -1,0 +1,9 @@
+config BR2_PACKAGE_TF2_KDL
+	bool "tf2_kdl"
+	select BR2_PACKAGE_EIGEN
+	select BR2_PACKAGE_TF2_ROS
+	help
+	  This is a conversion package to convert tf2 data to KDL data
+	  structures.
+
+	  http://wiki.ros.org/tf2_kdl

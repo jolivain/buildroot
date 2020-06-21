@@ -1,0 +1,10 @@
+config BR2_PACKAGE_TF2_GEOMETRY_MSGS
+	bool "tf2_geometry_msgs"
+	select BR2_PACKAGE_EIGEN
+	select BR2_PACKAGE_OROCOS_KDL
+	select BR2_PACKAGE_TF2_ROS
+	help
+	  This package allows to convert ros messages to tf2 messages
+	  and to retrieve data from ros messages.
+
+	  http://wiki.ros.org/tf2_geometry_msgs

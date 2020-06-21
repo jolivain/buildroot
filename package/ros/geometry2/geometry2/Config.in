@@ -1,0 +1,20 @@
+config BR2_PACKAGE_GEOMETRY2
+	bool "geometry2 metapackage"
+	select BR2_PACKAGE_TF2 # runtime
+	#select BR2_PACKAGE_TF2_BULLET
+	select BR2_PACKAGE_TF2_EIGEN # runtime
+	select BR2_PACKAGE_TF2_GEOMETRY_MSGS # runtime
+	select BR2_PACKAGE_TF2_KDL # runtime
+	select BR2_PACKAGE_TF2_MSGS # runtime
+	select BR2_PACKAGE_TF2_PY # runtime
+	select BR2_PACKAGE_TF2_ROS # runtime
+	select BR2_PACKAGE_TF2_SENSOR_MSGS # runtime
+	select BR2_PACKAGE_TF2_TOOLS # runtime
+	help
+	  A metapackage to bring in the default packages second
+	  generation Transform Library in ros, tf2.
+
+	  This metapackage selects common packages for this
+	  collection.
+
+	  http://wiki.ros.org/geometry2

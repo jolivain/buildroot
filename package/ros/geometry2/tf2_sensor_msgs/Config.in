@@ -1,0 +1,12 @@
+config BR2_PACKAGE_TF2_SENSOR_MSGS
+	bool "tf2_sensor_msgs"
+	select BR2_PACKAGE_BOOST_THREAD
+	select BR2_PACKAGE_CMAKE_MODULES
+	select BR2_PACKAGE_COMMON_MSGS_SET
+	select BR2_PACKAGE_EIGEN
+	select BR2_PACKAGE_SENSOR_MSGS
+	select BR2_PACKAGE_TF2_ROS
+	help
+	  Small lib to transform sensor_msgs with tf.
+
+	  http://wiki.ros.org/tf2_sensor_msgs

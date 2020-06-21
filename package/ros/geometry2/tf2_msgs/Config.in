@@ -1,0 +1,12 @@
+config BR2_PACKAGE_TF2_MSGS
+	bool "tf2_msgs"
+	select BR2_PACKAGE_ACTIONLIB_MSGS
+	select BR2_PACKAGE_BOOST_THREAD
+	select BR2_PACKAGE_COMMON_MSGS_SET
+	select BR2_PACKAGE_GEOMETRY_MSGS
+	select BR2_PACKAGE_MESSAGE_GENERATION
+	help
+	  This is the package grouping the Transform and Error
+	  messages used by tf2 and tf2_ros.
+
+	  http://wiki.ros.org/tf2_msgs
