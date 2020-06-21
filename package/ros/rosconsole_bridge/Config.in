@@ -1,0 +1,11 @@
+config BR2_PACKAGE_ROSCONSOLE_BRIDGE
+	bool "rosconsole_bridge"
+	select BR2_PACKAGE_CPP_COMMON
+	select BR2_PACKAGE_ROSCONSOLE
+	select BR2_PACKAGE_ROSCPP_CORE_SET
+	help
+	  rosconsole_bridge is a package used in conjunction with
+	  console_bridge and rosconsole for connecting
+	  console_bridge-based logging to rosconsole-based logging.
+
+	  https://wiki.ros.org/rosconsole_bridge
