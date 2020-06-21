@@ -1,0 +1,12 @@
+config BR2_PACKAGE_VISUALIZATION_MSGS
+	bool "visualization_msgs"
+	select BR2_PACKAGE_GEOMETRY_MSGS
+	help
+	  visualization_msgs is a set of messages used by higher level
+	  packages, such as rviz, that deal in visualization-specific
+	  data. The main messages in visualization_msgs is
+	  visualization_msgs/Marker. The marker message is used to
+	  send visualization "markers" such as boxes, spheres, arrows,
+	  lines, etc. to a visualization environment such as rviz.
+
+	  http://wiki.ros.org/visualization_msgs

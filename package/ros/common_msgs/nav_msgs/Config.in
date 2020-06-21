@@ -1,0 +1,9 @@
+config BR2_PACKAGE_NAV_MSGS
+	bool "nav_msgs"
+	select BR2_PACKAGE_ACTIONLIB_MSGS
+	select BR2_PACKAGE_GEOMETRY_MSGS
+	help
+	  nav_msgs defines the common messages used to interact with
+	  the navigation stack.
+
+	  http://wiki.ros.org/nav_msgs

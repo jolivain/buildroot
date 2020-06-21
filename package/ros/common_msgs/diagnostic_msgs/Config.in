@@ -1,0 +1,13 @@
+config BR2_PACKAGE_DIAGNOSTIC_MSGS
+	bool "diagnostic_msgs"
+	help
+	  This package holds the diagnostic messages which provide the
+	  standardized interface for the diagnostic and runtime
+	  monitoring systems in ROS. These messages are currently used
+	  by the diagnostics Stack, which provides libraries for
+	  simple ways to set and access the messages, as well as
+	  automated ways to process the diagnostic data. These
+	  messages are used for long term logging and will not be
+	  changed unless there is a very important reason.
+
+	  http://wiki.ros.org/diagnostic_msgs
