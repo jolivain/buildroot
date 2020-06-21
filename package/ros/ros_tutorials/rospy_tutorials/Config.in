@@ -1,0 +1,9 @@
+config BR2_PACKAGE_ROSPY_TUTORIALS
+	bool "rospy_toturials"
+	help
+	  This package attempts to show the features of ROS python API
+	  step-by-step, including using messages, servers, parameters,
+	  etc. These tutorials are compatible with the nodes in
+	  roscpp_tutorial.
+
+	  https://wiki.ros.org/rospy_tutorials
