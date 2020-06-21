@@ -1,0 +1,8 @@
+config BR2_PACKAGE_CMAKE_MODULES
+	bool "cmake modules"
+	help
+	  A common repository for CMake Modules which are not
+	  distributed with CMake but are commonly used by ROS
+	  packages.
+
+	  http://wiki.ros.org/cmake_modules
