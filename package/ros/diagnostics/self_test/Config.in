@@ -1,0 +1,7 @@
+config BR2_PACKAGE_SELF_TEST
+	bool "self_test"
+	select BR2_PACKAGE_DIAGNOSTIC_MSGS
+	select BR2_PACKAGE_DIAGNOSTIC_UPDATER
+	select BR2_PACKAGE_ROSCPP
+	help
+	  self_test

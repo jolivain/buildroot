@@ -1,0 +1,12 @@
+menuconfig BR2_PACKAGE_DIAGNOSTICS_SET
+	bool "diagnostics collection"
+
+if BR2_PACKAGE_DIAGNOSTICS_SET
+source "package/ros/diagnostics/diagnostic_aggregator/Config.in"
+source "package/ros/diagnostics/diagnostic_analysis/Config.in"
+source "package/ros/diagnostics/diagnostic_common_diagnostics/Config.in"
+source "package/ros/diagnostics/diagnostic_updater/Config.in"
+source "package/ros/diagnostics/diagnostics/Config.in"
+source "package/ros/diagnostics/rosdiagnostic/Config.in"
+source "package/ros/diagnostics/self_test/Config.in"
+endif

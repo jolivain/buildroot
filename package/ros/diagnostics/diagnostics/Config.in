@@ -1,0 +1,18 @@
+config BR2_PACKAGE_DIAGNOSTICS
+	bool "diagnostics metapackage"
+	select BR2_PACKAGE_DIAGNOSTIC_AGGREGATOR # runtime
+	select BR2_PACKAGE_DIAGNOSTIC_ANALYSIS # runtime
+	select BR2_PACKAGE_DIAGNOSTIC_COMMON_DIAGNOSTICS # runtime
+	select BR2_PACKAGE_DIAGNOSTIC_UPDATER # runtime
+	select BR2_PACKAGE_SELF_TEST # runtime
+	help
+	  The diagnostics system is designed to collect information
+	  from hardware drivers and robot hardware to users and
+	  operators for analysis, troubleshooting, and logging. The
+	  diagnostics stack contains tools for collecting, publishing,
+	  analyzing and viewing diagnostics data.
+
+	  This metapackage selects common packages for this
+	  collection.
+
+	  http://wiki.ros.org/diagnostics

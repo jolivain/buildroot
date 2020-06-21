@@ -1,0 +1,13 @@
+config BR2_PACKAGE_DIAGNOSTIC_UPDATER
+	bool "diagnostic_updater"
+	select BR2_PACKAGE_DIAGNOSTIC_MSGS
+	select BR2_PACKAGE_ROS_COMM_SET
+	select BR2_PACKAGE_ROSCPP
+	select BR2_PACKAGE_ROSTEST
+	select BR2_PACKAGE_STD_MSGS
+	help
+	  diagnostic_updater contains tools for easily updating
+	  diagnostics. it is commonly used in device drivers to keep
+	  track of the status of output topics, device status, etc.
+
+	  http://wiki.ros.org/diagnostic_updater

@@ -1,0 +1,11 @@
+config BR2_PACKAGE_ROSDIAGNOSTIC
+	bool "rosdiagnostic"
+	select BR2_PACKAGE_COMMON_MSGS_SET
+	select BR2_PACKAGE_DIAGNOSTIC_MSGS # runtime
+	select BR2_PACKAGE_ROSPY # runtime
+	select BR2_PACKAGE_ROS_COMM_SET
+	help
+	  Command to print aggregated diagnostic contents to the
+	  command line.
+
+	  https://github.com/ros/diagnostics/tree/noetic-devel/rosdiagnostic
