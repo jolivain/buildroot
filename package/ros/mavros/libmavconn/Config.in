@@ -1,0 +1,6 @@
+config BR2_PACKAGE_LIBMAVCONN
+	bool "libmavconn"
+	help
+	  MAVLink communication library. This library provide unified
+	  connection handling classes and URL to connection object
+	  mapper. This library can be used in standalone programs.

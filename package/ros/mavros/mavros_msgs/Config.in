@@ -1,0 +1,4 @@
+config BR2_PACKAGE_MAVROS_MSGS
+	bool "mavros_msgs"
+	help
+	  mavros_msgs
