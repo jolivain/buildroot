@@ -1,0 +1,45 @@
+From ae93f2e7f84cd4f3925a4397197ba4bf72f7a4b7 Mon Sep 17 00:00:00 2001
+From: Julien Olivain <ju.o@free.fr>
+Date: Mon, 29 Jun 2020 21:24:48 +0200
+Subject: [PATCH] CMakeLists.txt: inconditionally use python3 for python
+ executable
+
+The package attempt to detect python binaries with CMake. This result to
+setting the target Python binary in Buildroot. This patch forces the
+python executable to "python3", to find the one available in the PATH.
+
+Signed-off-by: Julien Olivain <ju.o@free.fr>
+---
+ CMakeLists.txt | 16 +---------------
+ 1 file changed, 1 insertion(+), 15 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index bd600b66..9918c4ad 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -17,21 +17,7 @@ include(GNUInstallDirs)
+ # hack from urdfdom: by default this would be 'lib/x86_64-linux-gnu'
+ set(CMAKE_INSTALL_LIBDIR lib)
+ 
+-if (DEFINED ENV{ROS_PYTHON_VERSION})
+-    set(Py_VERSION $ENV{ROS_PYTHON_VERSION})
+-else()
+-    message(WARNING "ENV ROS_PYTHON_VERSION is not set. Use default: 2")
+-    set(Py_VERSION "2")
+-endif()
+-
+-if (NOT CMAKE_VERSION VERSION_LESS "3.12")
+-    find_package(Python${Py_VERSION} COMPONENTS Interpreter)
+-    set(Python_EXECUTABLE "${Python${Py_VERSION}_EXECUTABLE}")
+-else()
+-    # find libraries with cmake modules
+-    find_package(PythonInterp ${Py_VERSION} REQUIRED)
+-    set(Python_EXECUTABLE "${PYTHON_EXECUTABLE}")
+-endif()
++set(Python_EXECUTABLE "python3")
+ 
+ message(STATUS "Python ${Py_VERSION} iterpretator: ${Python_EXECUTABLE}")
+ 
+-- 
+2.26.2
+
