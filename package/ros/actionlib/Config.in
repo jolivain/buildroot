@@ -1,0 +1,24 @@
+config BR2_PACKAGE_ACTIONLIB
+	bool "actionlib"
+	select BR2_PACKAGE_ACTIONLIB_MSGS
+	select BR2_PACKAGE_BOOST_CHRONO
+	select BR2_PACKAGE_BOOST_FILESYSTEM
+	select BR2_PACKAGE_BOOST_THREAD
+	select BR2_PACKAGE_COMMON_MSGS_SET
+	select BR2_PACKAGE_ROSCPP
+	select BR2_PACKAGE_ROS_COMM_SET
+	help
+	  The actionlib package provides a standardized interface for
+	  interfacing with preemptible tasks. Examples of this include
+	  moving the base to a target location, performing a laser
+	  scan and returning the resulting point cloud, detecting the
+	  handle of a door, etc.
+
+	  http://wiki.ros.org/actionlib
+
+config BR2_PACKAGE_ACTIONLIB_ENABLE_TEST
+	bool "actionlib test"
+	depends on BR2_PACKAGE_ACTIONLIB
+	select BR2_PACKAGE_ROSTEST
+	help
+	  enalbe actionlib test
