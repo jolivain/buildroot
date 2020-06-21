@@ -1,0 +1,9 @@
+config BR2_PACKAGE_ROSCPP_TRAITS
+	bool "roscpp_traits"
+	select BR2_PACKAGE_CPP_COMMON
+	select BR2_PACKAGE_ROSTIME
+	help
+	  roscpp_traits contains the message traits code as described
+	  in MessagesTraits.
+
+	  https://wiki.ros.org/roscpp_traits
