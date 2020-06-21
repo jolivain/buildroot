@@ -1,0 +1,6 @@
+menuconfig BR2_PACKAGE_GEOGRAPHIC_INFO_SET
+	bool "geographic_info collection"
+
+if BR2_PACKAGE_GEOGRAPHIC_INFO_SET
+source "package/ros/geographic_info/geographic_msgs/Config.in"
+endif
