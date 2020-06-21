@@ -33,6 +33,7 @@ menuconfig BR2_PACKAGE_ROS_SUPPORT
 	  See: http://wiki.ros.org/Metapackages
 
 if BR2_PACKAGE_ROS_SUPPORT
+source "package/ros/angles/Config.in"
 source "package/ros/catkin/Config.in"
 source "package/ros/class_loader/Config.in"
 source "package/ros/cmake_modules/Config.in"
