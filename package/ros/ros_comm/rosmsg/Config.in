@@ -1,0 +1,12 @@
+config BR2_PACKAGE_ROSMSG
+	bool "rosmsg"
+	select BR2_PACKAGE_ROSBAG
+	select BR2_PACKAGE_ROSLIB
+	select BR2_PACKAGE_ROS_SET
+	help
+	  rosmsg contains two command-line tools: rosmsg and rossrv,
+	  rosmsg is a command-line tools for displaying information
+	  about ROS Message types. rossrv is a command-line tool for
+	  displaying information about ROS Service types.
+
+	  http://wiki.ros.org/rosmsg

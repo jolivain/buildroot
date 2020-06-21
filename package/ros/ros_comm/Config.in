@@ -1,0 +1,25 @@
+menuconfig BR2_PACKAGE_ROS_COMM_SET
+	bool "ros_comm collection"
+
+if BR2_PACKAGE_ROS_COMM_SET
+source "package/ros/ros_comm/message_filters/Config.in"
+source "package/ros/ros_comm/ros_comm/Config.in"
+source "package/ros/ros_comm/rosbag/Config.in"
+source "package/ros/ros_comm/rosbag_storage/Config.in"
+source "package/ros/ros_comm/roscpp/Config.in"
+source "package/ros/ros_comm/rosgraph/Config.in"
+source "package/ros/ros_comm/roslaunch/Config.in"
+source "package/ros/ros_comm/roslz4/Config.in"
+source "package/ros/ros_comm/rosmaster/Config.in"
+source "package/ros/ros_comm/rosmsg/Config.in"
+source "package/ros/ros_comm/rosnode/Config.in"
+source "package/ros/ros_comm/rosout/Config.in"
+source "package/ros/ros_comm/rosparam/Config.in"
+source "package/ros/ros_comm/rospy/Config.in"
+source "package/ros/ros_comm/rosservice/Config.in"
+source "package/ros/ros_comm/rostest/Config.in"
+source "package/ros/ros_comm/rostopic/Config.in"
+source "package/ros/ros_comm/roswtf/Config.in"
+source "package/ros/ros_comm/topic_tools/Config.in"
+source "package/ros/ros_comm/xmlrpcpp/Config.in"
+endif

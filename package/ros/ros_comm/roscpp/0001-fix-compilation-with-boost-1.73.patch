@@ -1,0 +1,21 @@
+--- roscpp-1.15.7.orig/clients/roscpp/include/ros/connection_manager.h	2020-05-29 06:51:33.000000000 +0200
++++ roscpp-1.15.7/clients/roscpp/include/ros/connection_manager.h	2020-06-16 20:12:01.794741718 +0200
+@@ -29,6 +29,7 @@
+ #include "connection.h"
+ #include "common.h"
+ 
++#include <boost/bind.hpp>
+ #include <boost/thread/mutex.hpp>
+ #include <boost/signals2/connection.hpp>
+ 
+diff -Naur roscpp-1.15.7.orig/clients/roscpp/include/ros/timer_manager.h roscpp-1.15.7/clients/roscpp/include/ros/timer_manager.h
+--- roscpp-1.15.7.orig/clients/roscpp/include/ros/timer_manager.h	2020-05-29 06:51:33.000000000 +0200
++++ roscpp-1.15.7/clients/roscpp/include/ros/timer_manager.h	2020-06-16 20:07:55.989335861 +0200
+@@ -32,6 +32,7 @@
+ #include "ros/time.h"
+ #include "ros/file_log.h"
+ 
++#include <boost/bind.hpp>
+ #include <boost/thread/condition_variable.hpp>
+ #include <boost/thread/thread.hpp>
+ #include <boost/thread/mutex.hpp>
