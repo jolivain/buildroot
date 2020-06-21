@@ -1,0 +1,6 @@
+config BR2_PACKAGE_TEST_MAVROS
+	bool "test_mavros"
+	help
+	  Test package for mavros.
+
+	  https://github.com/mavlink/mavros/tree/master/test_mavros

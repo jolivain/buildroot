@@ -1,0 +1,4 @@
+config BR2_PACKAGE_MAVROS_EXTRAS
+	bool "mavros_extras"
+	help
+	  mavros_extras

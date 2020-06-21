@@ -1,0 +1,9 @@
+menuconfig BR2_PACKAGE_MAVROS_SET
+	bool "mavros collection"
+
+if BR2_PACKAGE_MAVROS_SET
+source "package/ros/mavros/libmavconn/Config.in"
+source "package/ros/mavros/mavros/Config.in"
+source "package/ros/mavros/mavros_extras/Config.in"
+source "package/ros/mavros/mavros_msgs/Config.in"
+endif
