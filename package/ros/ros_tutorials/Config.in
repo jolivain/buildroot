@@ -1,0 +1,7 @@
+menuconfig BR2_PACKAGE_ROS_TUTORIALS_SET
+	bool "ros_tutorials collection"
+
+if BR2_PACKAGE_ROS_TUTORIALS_SET
+source "package/ros/ros_tutorials/roscpp_tutorials/Config.in"
+source "package/ros/ros_tutorials/rospy_tutorials/Config.in"
+endif

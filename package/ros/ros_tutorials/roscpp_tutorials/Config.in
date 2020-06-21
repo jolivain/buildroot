@@ -1,0 +1,19 @@
+config BR2_PACKAGE_ROSCPP_TUTORIALS
+	bool "roscpp_tutorials"
+	depends on !BR2_TOOLCHAIN_HAS_GCC_BUG_64735 # boost-thread
+	select BR2_PACKAGE_BOOST_DATE_TIME
+	select BR2_PACKAGE_BOOST_THREAD # roscpp
+	select BR2_PACKAGE_MESSAGE_GENERATION
+	select BR2_PACKAGE_ROSCONSOLE
+	select BR2_PACKAGE_ROSCPP
+	select BR2_PACKAGE_ROSCPP_CORE_SET
+	select BR2_PACKAGE_ROSCPP_SERIALIZATION
+	select BR2_PACKAGE_ROSTIME
+	select BR2_PACKAGE_ROS_COMM_SET
+	select BR2_PACKAGE_STD_MSGS
+	help
+	  This package attempts to show the features of ROS
+	  step-by-step, including using messages, servers, parameters,
+	  etc.
+
+	  https://wiki.ros.org/roscpp_tutorials
