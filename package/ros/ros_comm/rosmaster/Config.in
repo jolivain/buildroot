@@ -1,0 +1,7 @@
+config BR2_PACKAGE_ROSMASTER
+	bool "rosmaster"
+	select BR2_PACKAGE_PYTHON_DEFUSEDXML
+	help
+	  ROS Master implementation.
+
+	  https://wiki.ros.org/rosmaster

@@ -1,0 +1,20 @@
+config BR2_PACKAGE_TOPIC_TOOLS
+	bool "topic_tools"
+	select BR2_PACKAGE_CPP_COMMON
+	select BR2_PACKAGE_MESSAGE_GENERATION
+	select BR2_PACKAGE_ROSCONSOLE
+	select BR2_PACKAGE_ROSCPP
+	select BR2_PACKAGE_ROSCPP_CORE_SET
+	select BR2_PACKAGE_ROSTEST
+	select BR2_PACKAGE_ROSTIME
+	select BR2_PACKAGE_STD_MSGS
+	select BR2_PACKAGE_XMLRPCPP
+	help
+	  Tools for directing, throttling, selecting, and otherwise
+	  messing with ROS topics at a meta level. None of the
+	  programs in this package actually know about the topics
+	  whose streams they are altering; instead, these tools deal
+	  with messages as generic binary blobs. This means they can
+	  be applied to any ROS topic.
+
+	  http://wiki.ros.org/topic_tools

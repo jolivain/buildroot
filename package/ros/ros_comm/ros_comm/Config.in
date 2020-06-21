@@ -1,0 +1,35 @@
+config BR2_PACKAGE_ROS_COMM
+	bool "ros_comm metapackage"
+	select BR2_PACKAGE_COMMON_MSGS_SET
+	select BR2_PACKAGE_MESSAGE_FILTERS
+	select BR2_PACKAGE_ROS
+	select BR2_PACKAGE_ROSBAG
+	select BR2_PACKAGE_ROSCONSOLE
+	select BR2_PACKAGE_ROSCPP
+	select BR2_PACKAGE_ROSGRAPH
+	select BR2_PACKAGE_ROSGRAPH_MSGS
+	select BR2_PACKAGE_ROSLAUNCH
+	#select BR2_PACKAGE_ROSLISP
+	select BR2_PACKAGE_ROSMASTER
+	select BR2_PACKAGE_ROSMSG
+	select BR2_PACKAGE_ROSNODE
+	select BR2_PACKAGE_ROSOUT
+	select BR2_PACKAGE_ROSPARAM
+	select BR2_PACKAGE_ROSPY
+	select BR2_PACKAGE_ROSSERVICE
+	select BR2_PACKAGE_ROSTEST
+	select BR2_PACKAGE_ROSTOPIC
+	select BR2_PACKAGE_ROSWTF
+	select BR2_PACKAGE_STD_SRVS
+	select BR2_PACKAGE_TOPIC_TOOLS
+	select BR2_PACKAGE_XMLRPCPP
+	help
+	  ros_comm metapackage: ROS communications-related packages,
+	  including core client libraries (roscpp, rospy) and graph
+	  introspection tools (rostopic, rosnode, rosservice,
+	  rosparam).
+
+	  This metapackage selects common packages for this
+	  collection.
+
+	  http://wiki.ros.org/ros_comm

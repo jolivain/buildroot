@@ -1,0 +1,14 @@
+config BR2_PACKAGE_ROSTEST
+	bool "rostest"
+	select BR2_PACKAGE_BOOST_SYSTEM
+	select BR2_PACKAGE_BOOST_THREAD
+	select BR2_PACKAGE_ROSUNIT
+	select BR2_PACKAGE_ROS_SET
+	help
+	  rostest is an extension to roslaunch that enables roslaunch
+	  files to be used as test fixtures. As a fully running system
+	  has more complex behaviors than an individual ROS node, this
+	  allows you to do full integration testing across multiple
+	  nodes.
+
+	  http://wiki.ros.org/rostest

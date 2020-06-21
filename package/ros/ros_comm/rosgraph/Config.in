@@ -1,0 +1,12 @@
+config BR2_PACKAGE_ROSGRAPH
+	bool "rosgraph"
+	depends on BR2_PACKAGE_PYTHON3
+	select BR2_PACKAGE_PYTHON_NETIFACES # runtime
+	select BR2_PACKAGE_PYTHON_ROSPKG # runtime
+	help
+	  rosgraph contains the rosgraph command-line tool, which
+	  prints information about the ROS Computation Graph. It also
+	  provides an internal library that is used by the graphical
+	  version of this tool, rxgraph.
+
+	  https://wiki.ros.org/rosgraph

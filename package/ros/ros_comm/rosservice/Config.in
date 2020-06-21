@@ -1,0 +1,9 @@
+config BR2_PACKAGE_ROSSERVICE
+	bool "rosservice"
+	help
+	  rosservice contains the rosservice command-line tool for
+	  listing and querying ROS Services. It also contains a Python
+	  library for retrieving information about Services and
+	  dynamically invoking them.
+
+	  http://wiki.ros.org/rosservice
