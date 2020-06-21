@@ -1,0 +1,7 @@
+menuconfig BR2_PACKAGE_ROS_COMM_MSGS_SET
+	bool "ros_comm_msgs collection"
+
+if BR2_PACKAGE_ROS_COMM_MSGS_SET
+source "package/ros/ros_comm_msgs/rosgraph_msgs/Config.in"
+source "package/ros/ros_comm_msgs/std_srvs/Config.in"
+endif
