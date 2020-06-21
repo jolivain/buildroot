@@ -1,0 +1,8 @@
+menuconfig BR2_PACKAGE_UNIQUE_IDENTIFIER_SET
+	bool "unique_identifier collection"
+
+if BR2_PACKAGE_UNIQUE_IDENTIFIER_SET
+source "package/ros/unique_identifier/unique_id/Config.in"
+source "package/ros/unique_identifier/unique_identifier/Config.in"
+source "package/ros/unique_identifier/uuid_msgs/Config.in"
+endif

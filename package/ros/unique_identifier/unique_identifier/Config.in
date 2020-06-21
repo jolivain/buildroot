@@ -1,0 +1,12 @@
+config BR2_PACKAGE_UNIQUE_IDENTIFIER
+	bool "unique_identifier metapackage"
+	select BR2_PACKAGE_UNIQUE_ID
+	select BR2_PACKAGE_UUID_MSGS
+	help
+	  unique_identifier metapackage: ROS messages and interfaces
+	  for universally unique identifiers.
+
+	  This metapackage selects common packages for this
+	  collection.
+
+	  https://wiki.ros.org/unique_identifier
