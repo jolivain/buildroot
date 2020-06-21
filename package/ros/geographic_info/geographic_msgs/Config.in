@@ -1,0 +1,12 @@
+config BR2_PACKAGE_GEOGRAPHIC_MSGS
+	bool "geographic_msgs"
+	select BR2_PACKAGE_GEOMETRY_MSGS
+	select BR2_PACKAGE_MESSAGE_GENERATION
+	select BR2_PACKAGE_MESSAGE_RUNTIME # runtime
+	select BR2_PACKAGE_STD_MSGS
+	select BR2_PACKAGE_UNIQUE_IDENTIFIER_SET
+	select BR2_PACKAGE_UUID_MSGS
+	help
+	  ROS messages for Geographic Information Systems.
+
+	  http://wiki.ros.org/geographic_msgs
