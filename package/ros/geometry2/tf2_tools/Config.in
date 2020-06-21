@@ -1,0 +1,7 @@
+config BR2_PACKAGE_TF2_TOOLS
+	bool "tf2_tools"
+	select BR2_PACKAGE_TF2_ROS
+	help
+	  tf2_tools
+
+	  http://wiki.ros.org/tf2_tools

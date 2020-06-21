@@ -1,0 +1,20 @@
+config BR2_PACKAGE_TF2
+	bool "tf2"
+	select BR2_PACKAGE_BOOST_SYSTEM
+	select BR2_PACKAGE_BOOST_THREAD
+	select BR2_PACKAGE_COMMON_MSGS_SET
+	select BR2_PACKAGE_CONSOLE_BRIDGE
+	select BR2_PACKAGE_GEOMETRY_MSGS
+	select BR2_PACKAGE_GTEST
+	select BR2_PACKAGE_ROSCPP_CORE_SET
+	select BR2_PACKAGE_ROSTIME
+	select BR2_PACKAGE_TF2_MSGS
+	help
+	  tf2 is the second generation of the transform library, which
+	  lets the user keep track of multiple coordinate frames over
+	  time. tf2 maintains the relationship between coordinate
+	  frames in a tree structure buffered in time, and lets the
+	  user transform points, vectors, etc between any two
+	  coordinate frames at any desired point in time.
+
+	  http://wiki.ros.org/tf2

@@ -1,0 +1,11 @@
+config BR2_PACKAGE_TF2_PY
+	bool "tf2_py"
+	select BR2_PACKAGE_ROSPY
+	select BR2_PACKAGE_ROS_COMM_SET
+	select BR2_PACKAGE_TF2
+	help
+	  This package allows to convert tf2 and geometry_msgs data to
+	  PyObjects. Also binds the tf2 functions and exceptions to
+	  python.
+
+	  http://wiki.ros.org/tf2_py

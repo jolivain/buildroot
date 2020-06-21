@@ -1,0 +1,7 @@
+config BR2_PACKAGE_TF2_EIGEN
+	bool "tf2_eigen"
+	help
+	  This is a conversion package to convert tf2 data to eigen
+	  data structures.
+
+	  http://wiki.ros.org/tf2_eigen
