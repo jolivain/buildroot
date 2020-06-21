@@ -1,0 +1,15 @@
+config BR2_PACKAGE_ROSCONSOLE
+	bool "rosconsole"
+	depends on !BR2_TOOLCHAIN_HAS_GCC_BUG_64735 # boost-thread
+	select BR2_PACKAGE_BOOST_REGEX
+	select BR2_PACKAGE_BOOST_SYSTEM
+	select BR2_PACKAGE_BOOST_THREAD
+	select BR2_PACKAGE_CPP_COMMON
+	select BR2_PACKAGE_LOG4CXX
+	select BR2_PACKAGE_ROSCPP_CORE_SET
+	select BR2_PACKAGE_ROSUNIT
+	select BR2_PACKAGE_ROS_SET
+	help
+	  ROS console output library.
+
+	  https://wiki.ros.org/rosconsole
