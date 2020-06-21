@@ -1,0 +1,11 @@
+config BR2_PACKAGE_STD_MSGS
+	bool "std_msgs"
+	select BR2_PACKAGE_HOST_PYTHON_PYYAML
+	select BR2_PACKAGE_MESSAGE_GENERATION
+	select BR2_PACKAGE_MESSAGE_RUNTIME # runtime
+	help
+	  Standard ROS Messages including common message types
+	  representing primitive data types and other basic message
+	  constructs, such as multiarrays.
+
+	  https://wiki.ros.org/std_msgs
