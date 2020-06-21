@@ -1,0 +1,10 @@
+config BR2_PACKAGE_ROSGRAPH_MSGS
+	bool "rosgraph_msgs"
+	select BR2_PACKAGE_MESSAGE_GENERATION
+	select BR2_PACKAGE_STD_MSGS
+	help
+	  Messages relating to the ROS Computation Graph. These are
+	  generally considered to be low-level messages that end users
+	  do not interact with.
+
+	  https://wiki.ros.org/rosgraph_msgs

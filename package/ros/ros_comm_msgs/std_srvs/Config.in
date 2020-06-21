@@ -1,0 +1,8 @@
+config BR2_PACKAGE_STD_SRVS
+	bool "std_srvs"
+	select BR2_PACKAGE_MESSAGE_GENERATION
+	select BR2_PACKAGE_MESSAGE_RUNTIME # runtime
+	help
+	  Common service definitions.
+
+	  https://wiki.ros.org/std_srvs
