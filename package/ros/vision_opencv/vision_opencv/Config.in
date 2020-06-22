@@ -1,0 +1,12 @@
+config BR2_PACKAGE_VISION_OPENCV
+	bool "vision_opencv metapackage"
+	select BR2_PACKAGE_CV_BRIDGE
+	select BR2_PACKAGE_IMAGE_GEOMETRY
+	help
+	  Packages for interfacing ROS with OpenCV, a library of
+	  programming functions for real time computer vision.
+
+	  This metapackage selects common packages for this
+	  collection.
+
+	  http://wiki.ros.org/vision_opencv

@@ -1,0 +1,38 @@
+From 1f880f3707d357d49399109a19a4d059c4e12388 Mon Sep 17 00:00:00 2001
+From: Julien Olivain <ju.o@free.fr>
+Date: Mon, 29 Jun 2020 21:55:26 +0200
+Subject: [PATCH] cv_bridge: do not hard-code distros / python version
+
+Use variables values from find_package(PythonInterp 3)
+
+Signed-off-by: Julien Olivain <ju.o@free.fr>
+---
+ cv_bridge/CMakeLists.txt | 12 +++---------
+ 1 file changed, 3 insertions(+), 9 deletions(-)
+
+diff --git a/cv_bridge/CMakeLists.txt b/cv_bridge/CMakeLists.txt
+index 839e2b6..1b230e7 100644
+--- a/cv_bridge/CMakeLists.txt
++++ b/cv_bridge/CMakeLists.txt
+@@ -4,15 +4,9 @@ project(cv_bridge)
+ find_package(catkin REQUIRED COMPONENTS rosconsole sensor_msgs)
+ 
+ if(NOT ANDROID)
+-  find_package(PythonLibs)
+-
+-  if(PYTHONLIBS_VERSION_STRING VERSION_LESS "3.8")
+-    # Debian Buster
+-    find_package(Boost REQUIRED python37)
+-  else()
+-    # Ubuntu Focal
+-    find_package(Boost REQUIRED python)
+-  endif()
++  find_package(PythonInterp 3)
++
++  find_package(Boost REQUIRED python${PYTHON_VERSION_MAJOR}${PYTHON_VERSION_MINOR})
+ else()
+ find_package(Boost REQUIRED)
+ endif()
+-- 
+2.26.2
+

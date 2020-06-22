@@ -1,0 +1,16 @@
+menuconfig BR2_PACKAGE_VISION_OPENCV_SET
+	bool "vision_opencv collection"
+	# We depends on opencv3 instead of selecting it to avoid a
+	# recursive Kconfig dependency loop (involving python3, jack2,
+	# fluidsynth, gstreamer1, opencv3, this package, numpy and
+	# python3).
+	depends on BR2_PACKAGE_OPENCV3
+
+if BR2_PACKAGE_VISION_OPENCV_SET
+source "package/ros/vision_opencv/cv_bridge/Config.in"
+source "package/ros/vision_opencv/image_geometry/Config.in"
+source "package/ros/vision_opencv/vision_opencv/Config.in"
+
+comment "vision_opencv needs opencv3"
+	depends on !BR2_PACKAGE_OPENCV3
+endif

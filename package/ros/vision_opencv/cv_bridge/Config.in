@@ -1,0 +1,15 @@
+config BR2_PACKAGE_CV_BRIDGE
+	bool "cv_bridge"
+	depends on BR2_PACKAGE_PYTHON_NUMPY_ARCH_SUPPORTS
+	select BR2_PACKAGE_BOOST_PYTHON
+	select BR2_PACKAGE_COMMON_MSGS_SET
+	select BR2_PACKAGE_OPENCV3_LIB_IMGCODECS
+	select BR2_PACKAGE_PYTHON_NUMPY
+	select BR2_PACKAGE_ROSCONSOLE
+	select BR2_PACKAGE_ROS_COMM_SET
+	select BR2_PACKAGE_SENSOR_MSGS
+	help
+	  This contains CvBridge, which converts between ROS Image
+	  messages and OpenCV images
+
+	  http://wiki.ros.org/cv_bridge
