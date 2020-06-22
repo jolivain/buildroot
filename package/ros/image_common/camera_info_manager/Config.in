@@ -1,0 +1,17 @@
+config BR2_PACKAGE_CAMERA_INFO_MANAGER
+	bool "camera_info_manager"
+	select BR2_PACKAGE_CAMERA_CALIBRATION_PARSERS
+	select BR2_PACKAGE_COMMON_MSGS_SET
+	select BR2_PACKAGE_IMAGE_TRANSPORT
+	select BR2_PACKAGE_ROSCPP
+	select BR2_PACKAGE_ROS_COMM_SET
+	select BR2_PACKAGE_ROS_ROSLIB
+	select BR2_PACKAGE_ROS_SET
+	select BR2_PACKAGE_SENSOR_MSGS
+	help
+	  This package provides a C++ interface for camera calibration
+	  information. It provides CameraInfo, and handles
+	  SetCameraInfo service requests, saving and restoring the
+	  camera calibration data.
+
+	  http://wiki.ros.org/camera_info_manager

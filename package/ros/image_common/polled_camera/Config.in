@@ -1,0 +1,17 @@
+config BR2_PACKAGE_POLLED_CAMERA
+	bool "polled_camera"
+	select BR2_PACKAGE_COMMON_MSGS_SET
+	select BR2_PACKAGE_IMAGE_TRANSPORT
+	select BR2_PACKAGE_MESSAGE_GENERATION
+	select BR2_PACKAGE_MESSAGE_RUNTIME
+	select BR2_PACKAGE_ROSCPP
+	select BR2_PACKAGE_STD_MSGS
+	select BR2_PACKAGE_ROS_COMM_SET
+	select BR2_PACKAGE_SENSOR_MSGS
+	help
+	  polled_camera contains a service and C++ helper classes for
+	  implementing a polled camera driver node and requesting
+	  images from it. The package is currently for internal use as
+	  the API is still under development.
+
+	  http://wiki.ros.org/polled_camera

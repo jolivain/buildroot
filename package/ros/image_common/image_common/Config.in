@@ -1,0 +1,14 @@
+config BR2_PACKAGE_IMAGE_COMMON
+	bool "image_common metapackage"
+	select BR2_PACKAGE_CAMERA_CALIBRATION_PARSERS
+	select BR2_PACKAGE_CAMERA_INFO_MANAGER
+	select BR2_PACKAGE_IMAGE_TRANSPORT
+	select BR2_PACKAGE_POLLED_CAMERA
+	help
+	  image_common metapackage: common code for working with
+	  images in ROS.
+
+	  This metapackage selects common packages for this
+	  collection.
+
+	  http://wiki.ros.org/image_common

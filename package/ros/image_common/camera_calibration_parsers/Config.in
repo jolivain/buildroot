@@ -1,0 +1,17 @@
+config BR2_PACKAGE_CAMERA_CALIBRATION_PARSERS
+	bool "camera_calibration_parsers"
+	select BR2_PACKAGE_BOOST_FILESYSTEM
+	select BR2_PACKAGE_BOOST_PYTHON
+	select BR2_PACKAGE_COMMON_MSGS_SET
+	select BR2_PACKAGE_ROSCONSOLE
+	select BR2_PACKAGE_ROSCPP
+	select BR2_PACKAGE_ROSCPP_CORE_SET
+	select BR2_PACKAGE_ROSCPP_SERIALIZATION
+	select BR2_PACKAGE_ROS_COMM_SET
+	select BR2_PACKAGE_SENSOR_MSGS
+	select BR2_PACKAGE_YAML_CPP
+	help
+	  camera_calibration_parsers contains routines for reading and
+	  writing camera calibration parameters.
+
+	  http://wiki.ros.org/camera_calibration_parsers

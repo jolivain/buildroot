@@ -1,0 +1,10 @@
+menuconfig BR2_PACKAGE_IMAGE_COMMON_SET
+	bool "image_common collection"
+
+if BR2_PACKAGE_IMAGE_COMMON_SET
+source "package/ros/image_common/camera_calibration_parsers/Config.in"
+source "package/ros/image_common/camera_info_manager/Config.in"
+source "package/ros/image_common/image_common/Config.in"
+source "package/ros/image_common/image_transport/Config.in"
+source "package/ros/image_common/polled_camera/Config.in"
+endif
