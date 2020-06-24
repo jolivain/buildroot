@@ -1,0 +1,19 @@
+config BR2_PACKAGE_NODELET
+	bool "nodelet"
+	select BR2_PACKAGE_PLUGINLIB
+	select BR2_PACKAGE_BOND_CORE_SET
+	select BR2_PACKAGE_BONDCPP
+	select BR2_PACKAGE_CMAKE_MODULES
+	select BR2_PACKAGE_MESSAGE_GENERATION
+	select BR2_PACKAGE_ROS_COMM_SET
+	select BR2_PACKAGE_ROSCONSOLE
+	select BR2_PACKAGE_STD_MSGS
+	help
+	  The nodelet package is designed to provide a way to run
+	  multiple algorithms in the same process with zero copy
+	  transport between algorithms. This package provides both the
+	  nodelet base class needed for implementing a nodelet, as
+	  well as the NodeletLoader class used for instantiating
+	  nodelets.
+
+	  https://wiki.ros.org/nodelet

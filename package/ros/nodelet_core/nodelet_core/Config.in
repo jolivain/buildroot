@@ -1,0 +1,19 @@
+config BR2_PACKAGE_NODELET_CORE
+	bool "nodelet_core metapackage"
+	select BR2_PACKAGE_NODELET
+	select BR2_PACKAGE_NODELET_TOPIC_TOOLS
+	help
+	  Nodelet Core Metapackage. Nodelet Core Metapackage: it
+	  contains necessary ros packages to work with ROS
+	  nodelets. In ROS, each node is a process. A nodelet is
+	  instead executed on a thread. The nodelet package is
+	  designed to provide a way to run multiple algorithms in the
+	  same process with zero copy transport between
+	  algorithms. This package provides both the nodelet base
+	  class needed for implementing a nodelet, as well as the
+	  NodeletLoader class used for instantiating nodelets.
+
+	  This metapackage selects common packages for this
+	  collection.
+
+	  https://wiki.ros.org/nodelet_core

@@ -1,0 +1,10 @@
+config BR2_PACKAGE_TEST_NODELET
+	bool "test_nodelet"
+	depends on BR2_PACKAGE_BOOST
+	depends on BR2_PACKAGE_NODELET
+	select BR2_PACKAGE_BOOST_THREAD
+	select BR2_PACKAGE_ROSTEST
+	help
+	  Test package for nodelet.
+
+	  https://wiki.ros.org/test_nodelet

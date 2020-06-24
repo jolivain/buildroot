@@ -1,0 +1,10 @@
+menuconfig BR2_PACKAGE_NODELET_CORE_SET
+	bool "nodelet_core collection"
+
+if BR2_PACKAGE_NODELET_CORE_SET
+source "package/ros/nodelet_core/nodelet/Config.in"
+source "package/ros/nodelet_core/nodelet_core/Config.in"
+source "package/ros/nodelet_core/nodelet_topic_tools/Config.in"
+source "package/ros/nodelet_core/test_nodelet/Config.in"
+source "package/ros/nodelet_core/test_nodelet_topic_tools/Config.in"
+endif
