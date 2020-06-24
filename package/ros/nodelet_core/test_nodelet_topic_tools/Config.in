@@ -1,0 +1,11 @@
+config BR2_PACKAGE_TEST_NODELET_TOPIC_TOOLS
+	bool "test_nodelet_topic_tools"
+	depends on BR2_PACKAGE_NODELET
+	select BR2_PACKAGE_MESSAGE_FILTERS
+	select BR2_PACKAGE_NODELET_TOPIC_TOOLS
+	select BR2_PACKAGE_ROSCPP
+	select BR2_PACKAGE_ROSTEST
+	help
+	  Test package for nodelet_topic_tools
+
+	  https://wiki.ros.org/nodelet_topic_tools

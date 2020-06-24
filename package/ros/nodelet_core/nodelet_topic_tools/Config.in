@@ -1,0 +1,10 @@
+config BR2_PACKAGE_NODELET_TOPIC_TOOLS
+	bool "nodelet_topic_tools"
+	select BR2_PACKAGE_BOOST
+	select BR2_PACKAGE_BOOST_THREAD
+	select BR2_PACKAGE_DYNAMIC_RECONFIGURE
+	help
+	  This package contains common nodelet tools such as a mux,
+	  demux and throttle.
+
+	  http://wiki.ros.org/nodelet_topic_tools
