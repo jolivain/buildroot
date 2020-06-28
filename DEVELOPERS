@@ -1438,6 +1438,7 @@ F:	package/ptm2human/
 F:	package/python-defusedxml/
 F:	package/python-distro/
 F:	package/python-empy/
+F:	package/python-gnupg/
 F:	package/python-pyalsa/
 
 N:	Julien Viard de Galbert <julien@vdg.name>
