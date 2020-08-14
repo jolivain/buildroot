@@ -8,6 +8,7 @@ menuconfig BR2_PACKAGE_ROS_SUPPORT
 	# they become implicit dependencies, to simplify Buildroot ROS
 	# package recipes.
 	select BR2_PACKAGE_BOOST
+	select BR2_PACKAGE_HOST_CATKIN
 	select BR2_PACKAGE_PYTHON3
 	help
 	  The Robot Operating System (ROS) is a set of software
