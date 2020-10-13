@@ -1,5 +1,7 @@
 BR2_aarch64=y
 BR2_ARM_FPU_VFPV3=y
+BR2_CCACHE=y
+BR2_TOOLCHAIN_EXTERNAL=y
 BR2_TARGET_GENERIC_GETTY_PORT="ttymxc1"
 BR2_ROOTFS_POST_IMAGE_SCRIPT="board/freescale/common/imx/imx8-bootloader-prepare.sh board/freescale/common/imx/post-image.sh"
 BR2_ROOTFS_POST_SCRIPT_ARGS="${UBOOT_DIR}/arch/arm/dts/imx8mm-navq.dtb"
