@@ -17,10 +17,6 @@ LOG4CXX_CONF_OPTS = \
 
 LOG4CXX_DEPENDENCIES = apr apr-util
 
-ifeq ($(BR2_PACKAGE_BOOST),y)
-LOG4CXX_DEPENDENCIES += boost
-endif
-
 ifeq ($(BR2_PACKAGE_LIBESMTP),y)
 LOG4CXX_DEPENDENCIES += libesmtp
 endif
