@@ -13,6 +13,7 @@ define inner-catkin-package
 	$(2)_DEPENDENCIES += host-catkin
 	$(2)_INSTALL_STAGING ?= YES
 	$(2)_CONF_OPTS += \
+		-DPYTHON_EXECUTABLE=$(HOST_DIR)/usr/bin/python3 \
 		-DCMAKE_PREFIX_PATH="$(STAGING_DIR)/$(ROSPREFIX);$(STAGING_DIR)/usr;$(HOST_DIR)/$(ROSPREFIX);$(HOST_DIR)/usr" \
 		-DCMAKE_INSTALL_PREFIX="$(ROSPREFIX)"
 
