@@ -1,0 +1,7 @@
+config BR2_PACKAGE_OCTAVE_CONTROL
+	bool "octave-control"
+	select BR2_PACKAGE_OCTAVE
+	help
+	  octave-control
+
+	  https://octave.sourceforge.io/control/
