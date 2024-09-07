@@ -1,6 +1,5 @@
 config BR2_PACKAGE_DPDK_ARCH_SUPPORTS
 	bool
-	default y
 	# DPDK can be used for the following little endian architecture
 	default y if BR2_RISCV_64
 	default y if BR2_aarch64
