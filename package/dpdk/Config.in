@@ -22,6 +22,20 @@ config BR2_PACKAGE_DPDK
 
 	  http://dpdk.org/
 
+if BR2_PACKAGE_DPDK
+
+config BR2_PACKAGE_DPDK_EXAMPLES
+	bool "Install examples"
+	help
+	  Install all DPDK examples.
+
+config BR2_PACKAGE_DPDK_TESTS
+	bool "Install tests"
+	help
+	  Install all DPDK tests.
+
+endif
+
 comment "DPDK needs a toolchain w/ dynamic library, threads, wchar, kernel headers >= 4.19"
 	depends on BR2_USE_MMU # pthread() memory mappings
 	depends on BR2_PACKAGE_DPDK_ARCH_SUPPORTS

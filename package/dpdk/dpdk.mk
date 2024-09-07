@@ -43,6 +43,18 @@ DPDK_DEPENDENCIES = \
 	host-pkgconf \
 	host-python-pyelftools
 
+ifeq ($(BR2_PACKAGE_DPDK_EXAMPLES),y)
+DPDK_CONF_OPTS += -Dexamples=all
+else
+DPDK_CONF_OPTS += -Dexamples=
+endif
+
+ifeq ($(BR2_PACKAGE_DPDK_TESTS),y)
+DPDK_CONF_OPTS += -Dtests=true
+else
+DPDK_CONF_OPTS += -Dtests=false
+endif
+
 ifeq ($(BR2_PACKAGE_LIBBSD),y)
 DPDK_DEPENDENCIES += libbsd
 endif
